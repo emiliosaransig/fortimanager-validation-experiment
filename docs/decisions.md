@@ -28,3 +28,14 @@ validation treatments.
 Undefined source transformations remain normalization errors. In particular,
 an unknown FortiManager `ha_mode` code fails during normalization because it
 cannot be mapped to the canonical source representation.
+
+## ADR-006: Baseline validation reports explicit rule identifiers
+
+Every detected baseline violation is attributed to one frozen constraint
+identifier from R01–R08. A plain accept/reject outcome is insufficient because
+the experiment must later determine whether an injected violation was detected
+by its expected constraint.
+
+The treatment does not create implicit rule identifiers during execution. Any
+unexpected mismatch between R01–R08 and the strict domain model is treated as an
+implementation or specification inconsistency, not as a new experimental rule.

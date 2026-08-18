@@ -38,6 +38,21 @@ normalization. Only after this mutation point is V1, or later V2, executed. This
 keeps model-constraint violations attributable to the validation treatment
 rather than to shared preparation.
 
-The V1 treatment, V2 treatment, mutation catalogue, and ground truth are
+## V1 baseline treatment
+
+V1 is the baseline model validation using R01–R08. Its input is the unvalidated
+normalized dictionary, and its result reports each detected violation with the
+corresponding frozen rule identifier.
+
+A `CanonicalDeviceRecord` is constructed only after the dictionary passes every
+R01–R08 check. At that point, V1 converts the validated management-IP string to
+an `IPv4Address` for the strict domain model. An invalid result contains no
+canonical record.
+
+F05 remains model-conformant under V1 when it has no R01–R08 violation;
+`"FortiClient-EMS"` is a valid non-empty hardware-model string. Processing
+eligibility is not part of V1.
+
+The V2 treatment, mutation catalogue, experiment cases, and ground truth are
 specified separately in later work packages. They are deliberately not defined
 or implemented here.
