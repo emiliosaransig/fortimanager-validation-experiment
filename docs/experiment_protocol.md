@@ -14,10 +14,29 @@ serial numbers.
 
 ## Experimental position
 
-The experiment begins after a raw, already anonymized device record has been
-normalized and immediately before validation. Normalization is therefore shared
-preparation, not an experimental validation treatment. Mutations will be
-injected only at the boundary between normalization and validation.
+The experimental data flow is:
+
+```text
+Source Record
+    ↓
+Normalization
+    ↓
+Normalized Dictionary
+    ↓
+Experimental Mutation Point
+    ↓
+Validation Treatment
+```
+
+Normalization is identical for both validation treatments. It only maps the
+selected source fields into their canonical representation and performs the
+defined source-format transformations. It does not validate constraints of the
+later `CanonicalDeviceRecord` model.
+
+Mutations are injected into the unvalidated normalized dictionary after
+normalization. Only after this mutation point is V1, or later V2, executed. This
+keeps model-constraint violations attributable to the validation treatment
+rather than to shared preparation.
 
 The V1 treatment, V2 treatment, mutation catalogue, and ground truth are
 specified separately in later work packages. They are deliberately not defined

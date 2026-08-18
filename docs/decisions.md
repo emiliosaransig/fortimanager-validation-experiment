@@ -17,3 +17,14 @@ normalization.
 ## ADR-004: Minimal research model
 
 The research model uses only the minimal attributes required by the experiment.
+
+## ADR-005: Validation is separated from normalization
+
+Normalization produces an unvalidated normalized dictionary and does not
+construct `CanonicalDeviceRecord`. This separation preserves experimental
+isolation: model violations can be attributed exclusively to the later
+validation treatments.
+
+Undefined source transformations remain normalization errors. In particular,
+an unknown FortiManager `ha_mode` code fails during normalization because it
+cannot be mapped to the canonical source representation.
