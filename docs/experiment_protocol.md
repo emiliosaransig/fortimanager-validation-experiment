@@ -122,5 +122,22 @@ valid control, and the natural K4 case. These five cases were executed under V1
 and V2, producing ten treatment results in `data/results/pilot_results.csv`.
 
 The pilot checks only that the experimental instrumentation behaves as frozen;
-it is not used for metrics or scientific interpretation. The complete 37-case
-experiment has not been executed, and no main-experiment result file exists.
+it is not used for metrics or scientific interpretation.
+
+## Main experiment execution
+
+The full main experiment executed all 37 frozen cases in deterministic order:
+E01–E32, C01–C04, and N01. Each case was evaluated first by V1 and then by V2,
+producing 74 paired treatment results. Independent deep copies preserved input
+isolation for every treatment execution.
+
+The exact raw treatment observations are captured with LF line endings in
+`data/results/main_results.csv`. Separate metadata in
+`data/results/main_run_provenance.json` records the frozen experiment-definition
+commit and tag, the later execution-code commit, runtime versions, counts, UTC
+run timestamp, relative result filename, and SHA-256 of the exact CSV bytes.
+
+Technical validation confirmed case/treatment uniqueness, frozen expected-rule
+relationships, control acceptance, N01 treatment behavior, and SHA-256
+integrity. This work package does not aggregate scientific metrics and does not
+interpret the captured results.

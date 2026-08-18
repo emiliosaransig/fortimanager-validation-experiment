@@ -61,3 +61,13 @@ the original `ExperimentCase` unchanged.
 The five-case pilot checks instrumentation across K1, K2, K3, a valid control,
 and K4. It does not support metrics or result interpretation. A review follows
 the successful pilot before the main experiment may be executed.
+
+## ADR-010: Main results are captured before metric interpretation
+
+Raw treatment results are captured completely and hashed before any metric
+aggregation or scientific interpretation. Separate provenance binds the result
+bytes to runtime versions and distinguishes the frozen experiment-definition
+commit from the later execution-code commit.
+
+Subsequent analysis must consume the frozen result file rather than rerunning or
+rewriting it implicitly.

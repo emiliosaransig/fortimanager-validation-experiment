@@ -14,17 +14,24 @@ Implemented:
 - the deterministic mutation catalogue M01–M10;
 - the 37 frozen experiment cases;
 - V2 processing validation with R09;
-- paired experiment-runner instrumentation; and
-- isolated pilot instrumentation and deterministic CSV export.
+- paired experiment-runner instrumentation;
+- isolated pilot instrumentation and deterministic CSV export; and
+- reproducible main-experiment capture with provenance and SHA-256 integrity.
 
 Executed:
 
-- the five-case pilot only.
+- the five-case pilot; and
+- the full 37-case paired main experiment.
 
-The following activities have not been executed:
+Captured:
 
-- the full 37-case experiment;
-- final metrics; and
+- 74 treatment results in `data/results/main_results.csv`; and
+- run provenance with the result-file SHA-256 in
+  `data/results/main_run_provenance.json`.
+
+The following activities have not been performed:
+
+- scientific metric aggregation; and
 - scientific result interpretation.
 
 ## Requirements
@@ -44,5 +51,5 @@ pytest
 ```
 
 The project uses a `src` layout. Research fixtures are stored in
-`data/fixtures/golden_devices.json`. The reviewed pilot output is stored in
-`data/results/pilot_results.csv`; no main-experiment output exists.
+`data/fixtures/golden_devices.json`; reviewed pilot and main-run outputs are
+stored in `data/results/`.

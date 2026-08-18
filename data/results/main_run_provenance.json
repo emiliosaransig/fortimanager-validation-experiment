@@ -1,0 +1,15 @@
+{
+  "case_count": 37,
+  "execution_commit": "41db974cdc69a961c684be9ecd258b9fab92d5f9",
+  "experiment_definition_commit": "74066ed0069e83a0fb239eea4ff2ce275fda15ef",
+  "experiment_definition_tag": "experiment-v1.0-pre-run",
+  "experiment_name": "fortimanager-validation-experiment",
+  "pydantic_version": "2.13.4",
+  "pytest_version": "8.4.2",
+  "python_version": "3.12.14",
+  "result_file": "data/results/main_results.csv",
+  "result_sha256": "70713719e968531570c7db261f28864cf3395fe631568fdc1841533638d9a87e",
+  "run_timestamp_utc": "2026-08-18T13:36:06Z",
+  "treatment_count": 2,
+  "treatment_result_count": 74
+}
