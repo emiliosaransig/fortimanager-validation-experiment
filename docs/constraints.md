@@ -1,4 +1,4 @@
-# V1 Baseline Model Constraints
+# Validation Constraints
 
 V1 evaluates the frozen baseline constraints R01–R08 against an unvalidated
 normalized dictionary. It reports every independently detectable violation in
@@ -52,7 +52,12 @@ R08 is evaluated only when `ha_state == "standalone"`. In that state,
 `ha_group_name` must be `None` and `ha_members` must equal `[]`. If one or both
 conditions fail, one R08 violation is reported.
 
-## R09 — Reserved processing constraint
+## R09 — Supported FortiGate model required for processing eligibility
 
-R09 remains reserved for a later application-specific processing constraint. It
-is not part of V1 and is not implemented in this work package.
+R09 is an application-specific processing constraint and is not part of V1. V2
+evaluates it only after a record passes R01–R08. A model-conformant record is
+processing eligible exactly when `hardware_model.startswith("FortiGate-")`.
+
+`"FortiClient-EMS"` therefore remains model conformant under V1 but is processing
+ineligible under V2. An R09 violation does not turn it into a model-conformance
+failure.

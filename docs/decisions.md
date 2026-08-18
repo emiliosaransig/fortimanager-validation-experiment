@@ -39,3 +39,13 @@ by its expected constraint.
 The treatment does not create implicit rule identifiers during execution. Any
 unexpected mismatch between R01–R08 and the strict domain model is treated as an
 implementation or specification inconsistency, not as a new experimental rule.
+
+## ADR-007: Processing eligibility follows successful baseline validation
+
+R09 is evaluated only for records that have passed R01–R08. Model invalidity and
+processing ineligibility are reported separately; baseline-invalid records have
+no processing-eligibility assessment.
+
+A model-conformant R09 case retains its valid `CanonicalDeviceRecord`. F05 is
+therefore a natural K4 case rather than a synthetic data error: it is model
+conformant but ineligible for the FortiGate processing path.

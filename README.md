@@ -5,16 +5,22 @@ validation treatments over a small canonical device model. It is an independent
 research artifact: it does not evaluate, reuse, or reproduce an operational or
 company implementation.
 
-The frozen first work package contains only:
+## Current status
 
-- the `CanonicalDeviceRecord` domain model;
-- normalization of the selected, anonymized FortiManager-shaped fields;
-- five golden research fixtures; and
-- unit tests and protocol documentation.
+Implemented:
 
-Validators, mutation generation, experiment execution, metrics, result export,
-CLI integration, NetBox integration, and FortiManager API access are outside the
-scope of this package.
+- normalization of the anonymized research fixtures;
+- V1 baseline validation for R01–R08 with rule-attributed violations;
+- the deterministic mutation catalogue M01–M10;
+- the 37 frozen experiment cases; and
+- V2 processing validation with R09.
+
+The following activities have not been executed or implemented:
+
+- a pilot experiment;
+- the full experiment runner;
+- final result export; and
+- metrics or statistical interpretation.
 
 ## Requirements
 
