@@ -12,3 +12,8 @@ data/results/*
 !data/results/pilot_results.csv
 !data/results/main_results.csv
 !data/results/main_run_provenance.json
+!data/results/analysis_classwise_detection.csv
+!data/results/analysis_detection_delta.csv
+!data/results/analysis_control_rejection.csv
+!data/results/analysis_k4_natural_case.json
+!data/results/analysis_summary.json

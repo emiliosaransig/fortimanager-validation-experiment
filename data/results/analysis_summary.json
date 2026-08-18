@@ -1,0 +1,85 @@
+{
+  "source_result_file": "data/results/main_results.csv",
+  "source_result_sha256": "70713719e968531570c7db261f28864cf3395fe631568fdc1841533638d9a87e",
+  "case_count": 37,
+  "treatment_result_count": 74,
+  "classwise_detection": [
+    {
+      "violation_class": "K1",
+      "treatment": "V1",
+      "n_cases": 12,
+      "detected_cases": 12,
+      "detection_rate": 1.0
+    },
+    {
+      "violation_class": "K1",
+      "treatment": "V2",
+      "n_cases": 12,
+      "detected_cases": 12,
+      "detection_rate": 1.0
+    },
+    {
+      "violation_class": "K2",
+      "treatment": "V1",
+      "n_cases": 12,
+      "detected_cases": 12,
+      "detection_rate": 1.0
+    },
+    {
+      "violation_class": "K2",
+      "treatment": "V2",
+      "n_cases": 12,
+      "detected_cases": 12,
+      "detection_rate": 1.0
+    },
+    {
+      "violation_class": "K3",
+      "treatment": "V1",
+      "n_cases": 8,
+      "detected_cases": 8,
+      "detection_rate": 1.0
+    },
+    {
+      "violation_class": "K3",
+      "treatment": "V2",
+      "n_cases": 8,
+      "detected_cases": 8,
+      "detection_rate": 1.0
+    }
+  ],
+  "detection_delta": [
+    {
+      "violation_class": "K1",
+      "v1_detection_rate": 1.0,
+      "v2_detection_rate": 1.0,
+      "delta_detection_rate": 0.0
+    },
+    {
+      "violation_class": "K2",
+      "v1_detection_rate": 1.0,
+      "v2_detection_rate": 1.0,
+      "delta_detection_rate": 0.0
+    },
+    {
+      "violation_class": "K3",
+      "v1_detection_rate": 1.0,
+      "v2_detection_rate": 1.0,
+      "delta_detection_rate": 0.0
+    }
+  ],
+  "control_rejection": [
+    {
+      "treatment": "V1",
+      "n_controls": 4,
+      "rejected_controls": 0,
+      "control_rejection_rate": 0.0
+    },
+    {
+      "treatment": "V2",
+      "n_controls": 4,
+      "rejected_controls": 0,
+      "control_rejection_rate": 0.0
+    }
+  ],
+  "k4_case": "N01"
+}

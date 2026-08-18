@@ -71,3 +71,14 @@ commit from the later execution-code commit.
 
 Subsequent analysis must consume the frozen result file rather than rerunning or
 rewriting it implicitly.
+
+## ADR-011: Scientific metrics are derived only from frozen raw results
+
+Analysis does not execute the experiment code again. The frozen
+`data/results/main_results.csv` is the sole source for all scientific metrics,
+and its exact bytes must pass the SHA-256 check against provenance and the known
+frozen hash before analysis begins.
+
+K1–K3, controls, and K4 are derived through separate predefined paths. Because
+K4 contains only the single natural N01 case, it is reported descriptively and
+is not converted into a class-level percentage metric.

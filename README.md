@@ -9,30 +9,31 @@ company implementation.
 
 Implemented:
 
-- normalization of the anonymized research fixtures;
-- V1 baseline validation for R01–R08 with rule-attributed violations;
-- the deterministic mutation catalogue M01–M10;
-- the 37 frozen experiment cases;
-- V2 processing validation with R09;
-- paired experiment-runner instrumentation;
-- isolated pilot instrumentation and deterministic CSV export; and
-- reproducible main-experiment capture with provenance and SHA-256 integrity.
+- the complete experiment pipeline;
+- the frozen 37-case main experiment;
+- reproducible result capture; and
+- deterministic frozen-result analysis.
 
 Executed:
 
-- the five-case pilot; and
-- the full 37-case paired main experiment.
+- the five-case pilot;
+- the 37-case paired main experiment; and
+- the frozen-result metric analysis.
 
-Captured:
+Outputs:
 
-- 74 treatment results in `data/results/main_results.csv`; and
-- run provenance with the result-file SHA-256 in
-  `data/results/main_run_provenance.json`.
+- `data/results/main_results.csv`;
+- `data/results/main_run_provenance.json`;
+- classwise detection analysis;
+- detection deltas;
+- control rejection analysis; and
+- the descriptive K4 result.
 
-The following activities have not been performed:
+Not part of the experiment code:
 
-- scientific metric aggregation; and
-- scientific result interpretation.
+- scientific discussion;
+- threats-to-validity interpretation; and
+- thesis narrative.
 
 ## Requirements
 
@@ -51,5 +52,5 @@ pytest
 ```
 
 The project uses a `src` layout. Research fixtures are stored in
-`data/fixtures/golden_devices.json`; reviewed pilot and main-run outputs are
-stored in `data/results/`.
+`data/fixtures/golden_devices.json`; reviewed pilot, main-run, and derived
+analysis outputs are stored in `data/results/`.

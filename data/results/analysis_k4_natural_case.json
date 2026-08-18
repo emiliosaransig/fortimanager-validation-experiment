@@ -1,0 +1,21 @@
+{
+  "case_id": "N01",
+  "violation_class": "K4",
+  "note": "Natural model-conformant but processing-ineligible case; no class-level rate is calculated.",
+  "V1": {
+    "expected_rule": null,
+    "observed_rules": [],
+    "accepted": true,
+    "observed_model_conformant": true,
+    "observed_processing_eligible": null
+  },
+  "V2": {
+    "expected_rule": "R09",
+    "observed_rules": [
+      "R09"
+    ],
+    "accepted": false,
+    "observed_model_conformant": true,
+    "observed_processing_eligible": false
+  }
+}

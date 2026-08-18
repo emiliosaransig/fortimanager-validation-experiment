@@ -141,3 +141,22 @@ Technical validation confirmed case/treatment uniqueness, frozen expected-rule
 relationships, control acceptance, N01 treatment behavior, and SHA-256
 integrity. This work package does not aggregate scientific metrics and does not
 interpret the captured results.
+
+## Frozen result analysis
+
+The deterministic analysis consumes only the frozen
+`data/results/main_results.csv`; it does not execute normalization, mutations,
+validators, the pilot, or the main-experiment runner. Before parsing the CSV,
+the SHA-256 of its exact bytes is checked both against
+`data/results/main_run_provenance.json` and the known frozen hash.
+
+For K1–K3, detection rate is calculated separately by class and treatment as
+the absolute number of detected expected rules divided by the class-level case
+count. The detection delta is the V2 detection rate minus the V1 detection rate.
+The four C01–C04 controls are evaluated separately through control rejection
+rate.
+
+K4 is not included in any classwise detection-rate calculation. Its single
+natural N01 case is reported descriptively with separate V1 and V2 states;
+because K4 has only one natural case, no K4 percentage metric is produced. The
+analysis performs no inferential statistical tests.

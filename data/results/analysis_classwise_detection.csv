@@ -1,0 +1,7 @@
+violation_class,treatment,n_cases,detected_cases,detection_rate
+K1,V1,12,12,1.0
+K1,V2,12,12,1.0
+K2,V1,12,12,1.0
+K2,V2,12,12,1.0
+K3,V1,8,8,1.0
+K3,V2,8,8,1.0
