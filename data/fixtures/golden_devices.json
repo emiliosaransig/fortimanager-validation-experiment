@@ -1,0 +1,73 @@
+[
+  {
+    "fixture_id": "F01",
+    "raw": {
+      "name": "DEVICE-001",
+      "hostname": "HOST-001",
+      "sn": "SERIAL-001",
+      "platform_str": "FortiGate-60F",
+      "ip": "192.0.2.10",
+      "ha_mode": 0,
+      "ha_group_name": "",
+      "ha_slave": null
+    }
+  },
+  {
+    "fixture_id": "F02",
+    "raw": {
+      "name": "DEVICE-005",
+      "hostname": "HOST-005",
+      "sn": "SERIAL-005",
+      "platform_str": "FortiGate-100F",
+      "ip": "192.0.2.20",
+      "ha_mode": 1,
+      "ha_group_name": "CLUSTER-001",
+      "ha_slave": [
+        {"sn": "SERIAL-005-A"},
+        {"sn": "SERIAL-005-B"}
+      ]
+    }
+  },
+  {
+    "fixture_id": "F03",
+    "raw": {
+      "name": "DEVICE-006",
+      "hostname": "HOST-006",
+      "sn": "SERIAL-006",
+      "platform_str": "FortiGate-200F",
+      "ip": "192.0.2.30",
+      "ha_mode": 0,
+      "ha_group_name": "",
+      "ha_slave": null
+    }
+  },
+  {
+    "fixture_id": "F04",
+    "raw": {
+      "name": "DEVICE-007",
+      "hostname": "HOST-007",
+      "sn": "SERIAL-007",
+      "platform_str": "FortiGate-200F",
+      "ip": "192.0.2.40",
+      "ha_mode": 1,
+      "ha_group_name": "CLUSTER-002",
+      "ha_slave": [
+        {"sn": "SERIAL-007-A"},
+        {"sn": "SERIAL-007-B"}
+      ]
+    }
+  },
+  {
+    "fixture_id": "F05",
+    "raw": {
+      "name": "DEVICE-003",
+      "hostname": "",
+      "sn": "SERIAL-003",
+      "platform_str": "FortiClient-EMS",
+      "ip": "192.0.2.50",
+      "ha_mode": 0,
+      "ha_group_name": "",
+      "ha_slave": null
+    }
+  }
+]

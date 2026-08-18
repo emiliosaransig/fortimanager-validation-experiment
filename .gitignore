@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+build/
+dist/
+
+# Generated experiment outputs belong here but are not versioned.
+data/results/*
+!data/results/.gitkeep
