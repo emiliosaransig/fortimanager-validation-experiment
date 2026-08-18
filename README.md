@@ -12,15 +12,20 @@ Implemented:
 - normalization of the anonymized research fixtures;
 - V1 baseline validation for R01–R08 with rule-attributed violations;
 - the deterministic mutation catalogue M01–M10;
-- the 37 frozen experiment cases; and
-- V2 processing validation with R09.
+- the 37 frozen experiment cases;
+- V2 processing validation with R09;
+- paired experiment-runner instrumentation; and
+- isolated pilot instrumentation and deterministic CSV export.
 
-The following activities have not been executed or implemented:
+Executed:
 
-- a pilot experiment;
-- the full experiment runner;
-- final result export; and
-- metrics or statistical interpretation.
+- the five-case pilot only.
+
+The following activities have not been executed:
+
+- the full 37-case experiment;
+- final metrics; and
+- scientific result interpretation.
 
 ## Requirements
 
@@ -39,5 +44,5 @@ pytest
 ```
 
 The project uses a `src` layout. Research fixtures are stored in
-`data/fixtures/golden_devices.json`; `data/results/` is intentionally empty and
-reserved for later work packages.
+`data/fixtures/golden_devices.json`. The reviewed pilot output is stored in
+`data/results/pilot_results.csv`; no main-experiment output exists.

@@ -49,3 +49,15 @@ no processing-eligibility assessment.
 A model-conformant R09 case retains its valid `CanonicalDeviceRecord`. F05 is
 therefore a natural K4 case rather than a synthetic data error: it is model
 conformant but ineligible for the FortiGate processing path.
+
+## ADR-008: Treatments operate on isolated copies
+
+V1 and V2 receive independent deep copies of the same experimental case record.
+This prevents either treatment from influencing the other's input and preserves
+the original `ExperimentCase` unchanged.
+
+## ADR-009: A pilot run precedes the main experiment
+
+The five-case pilot checks instrumentation across K1, K2, K3, a valid control,
+and K4. It does not support metrics or result interpretation. A review follows
+the successful pilot before the main experiment may be executed.

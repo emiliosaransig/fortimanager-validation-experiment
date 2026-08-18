@@ -100,6 +100,27 @@ The frozen matrix contains exactly 37 experimental units:
   not eligible for the application-specific processing path, with R09 as its
   expected rule. It is not a synthetic data fault.
 
-The catalogue, cases, and both validation treatments are implemented, but this
-work package does not execute V1 and V2 over the full matrix. No pilot, full
-experiment, metrics, result export, or interpretation has been performed.
+## Paired treatment runner
+
+The runner executes each selected `ExperimentCase` first under V1 and then under
+V2. Each treatment receives its own deep copy of the case record; neither
+treatment can affect the other input, and the original case remains unchanged.
+
+Expected rules are treatment-specific. E01–E32 expect their frozen baseline
+rule under both V1 and V2. Controls expect no rule. N01 expects no rule under V1
+and R09 under V2. When no rule is expected, expected-rule detection is recorded
+as `None`, not as a failed detection.
+
+The treatment result records all observed rule IDs and separately records model
+conformance, processing eligibility, and acceptance. CSV export uses a stable
+schema without timestamps and serializes multiple rule IDs with `|`.
+
+## Pilot instrumentation check
+
+The pilot contains exactly E01, E17, E25, C01, and N01, covering K1, K2, K3, a
+valid control, and the natural K4 case. These five cases were executed under V1
+and V2, producing ten treatment results in `data/results/pilot_results.csv`.
+
+The pilot checks only that the experimental instrumentation behaves as frozen;
+it is not used for metrics or scientific interpretation. The complete 37-case
+experiment has not been executed, and no main-experiment result file exists.

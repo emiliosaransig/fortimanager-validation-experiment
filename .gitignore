@@ -6,6 +6,7 @@ __pycache__/
 build/
 dist/
 
-# Generated experiment outputs belong here but are not versioned.
+# Only explicitly reviewed research outputs are versioned.
 data/results/*
 !data/results/.gitkeep
+!data/results/pilot_results.csv
