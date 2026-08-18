@@ -10,3 +10,5 @@ dist/
 data/results/*
 !data/results/.gitkeep
 !data/results/pilot_results.csv
+!data/results/main_results.csv
+!data/results/main_run_provenance.json
