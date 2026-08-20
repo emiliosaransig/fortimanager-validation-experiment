@@ -1,0 +1,11 @@
+case_id,fixture_id,mutation_id,violation_class,treatment,ground_truth_model_conformant,ground_truth_processing_eligible,expected_rule,observed_rules,expected_rule_detected,accepted,observed_model_conformant,observed_processing_eligible
+E01,F01,M01,K1,V1,False,,R01,R01,True,False,False,
+E01,F01,M01,K1,V2,False,,R01,R01,True,False,False,
+E17,F01,M05,K2,V1,False,,R04,R04,True,False,False,
+E17,F01,M05,K2,V2,False,,R04,R04,True,False,False,
+E25,F02,M07,K3,V1,False,,R06,R06,True,False,False,
+E25,F02,M07,K3,V2,False,,R06,R06,True,False,False,
+C01,F01,,,V1,True,True,,,,True,True,
+C01,F01,,,V2,True,True,,,,True,True,True
+N01,F05,,K4,V1,True,False,,,,True,True,
+N01,F05,,K4,V2,True,False,R09,R09,True,False,True,False

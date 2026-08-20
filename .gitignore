@@ -1,0 +1,19 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+build/
+dist/
+
+# Only explicitly reviewed research outputs are versioned.
+data/results/*
+!data/results/.gitkeep
+!data/results/pilot_results.csv
+!data/results/main_results.csv
+!data/results/main_run_provenance.json
+!data/results/analysis_classwise_detection.csv
+!data/results/analysis_detection_delta.csv
+!data/results/analysis_control_rejection.csv
+!data/results/analysis_k4_natural_case.json
+!data/results/analysis_summary.json
